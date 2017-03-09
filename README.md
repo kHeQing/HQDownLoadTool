@@ -59,5 +59,5 @@ typedef void(^DownLoadFailed)(NSString *errorMsg);
 
 ```
 platform :ios, '9.0'
-pod 'HQDownLoadTool.podspec'
+pod 'HQDownLoadTool'
 ```
