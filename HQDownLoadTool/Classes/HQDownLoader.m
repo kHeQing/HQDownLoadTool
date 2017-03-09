@@ -31,7 +31,6 @@
 @implementation HQDownLoader
 
 #pragma mark - 接口
-
 - (void)downLoadWithURL:(NSURL *)url messageBlock:(DownLoadMessage)messageBlock progress:(DownLoadPrograssChange)progressBlock success:(DownLoadSuccess)succcessBlock failed:(DownLoadFailed)failedBlock{
     
     self.messageBlock = messageBlock;
@@ -107,7 +106,6 @@
 }
 
 #pragma mark - NSURLSessionDataDelegate
-
 /**
  第一次接受到下载信息 相应头信息的时候调用
 
