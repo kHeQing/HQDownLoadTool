@@ -52,6 +52,31 @@ typedef void(^DownLoadFailed)(NSString *errorMsg);
 
 @end
 ```
+### 用法
+```
+- (IBAction)downLoad:(id)sender {
+    
+    NSURL *url = [NSURL URLWithString:@"http://XXXXXXXXXXXXXXXX"];
+    [self.downLoader downLoadWithURL:url messageBlock:^(long long totalSize, NSString *downLoadedPath) {
+        
+        NSLog(@"开始下载--%@--%lld",downLoadedPath,totalSize);
+        
+    } progress:^(float progress) {
+        
+        NSLog(@"下载中--%f",progress);
+        
+    } success:^(NSString *downLoadedPath) {
+        
+        NSLog(@"完成--%@",downLoadedPath);
+        
+    } failed:^(NSString *errorMsg) {
+        
+        NSLog(@"失败--%@",errorMsg);
+        
+    }];
+}
+
+```
 
 ### 支持CocoaPods  
 
